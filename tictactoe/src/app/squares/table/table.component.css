@@ -1,0 +1,8 @@
+.container {
+display: inline-block;
+   height:50px;
+   width:33%;
+   background-color: rgb(163, 163, 173);
+    align-items: center;
+    text-align: center;
+}
