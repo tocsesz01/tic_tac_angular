@@ -6,3 +6,10 @@ display: inline-block;
     align-items: center;
     text-align: center;
 }
+.description{
+    text-align: center;
+}
+.newgame{
+    text-align: center;
+}
+

@@ -2,6 +2,9 @@
 <div class="container" *ngFor="let square of boardService.board;">
 <app-square [id]="square.id" (click)="changeNext()"></app-square>
 </div>
-<div *ngIf="this.winner==''">{{ next }} is next</div>
+<div class="description" *ngIf="this.winner==''">{{ next }} is next</div>
 
-<div *ngIf="this.winner!=''">The winner is: {{ winner }}</div>
+<div class="description" *ngIf="this.winner!==''">The winner is: {{ winner }}</div>
+<div class="newgame">
+    <button (click)="newGame()" *ngIf="this.winner!==''">New Game</button>
+</div>

@@ -17,6 +17,7 @@ export class TictacserviceService {
   }
 
   newGame(): void{
+    this.winner = '';
     this.turnCount = 0;
     this.nextPlayer = 'X';
     this.isGameOver= false;
