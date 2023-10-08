@@ -1,18 +1,19 @@
 .square{
     background-color: rgb(162, 221, 231);
     height: 100%;
-    width: 70%;
+    width: 150%;
     float:left;
     text-align: center;
     cursor: pointer;
     text-align: center;
     vertical-align: middle;
-    margin-left: 15%;
+    
     
 }
 p { 
     display: inline;
     margin: 0px;
-    font-size: 5rem;
+    font-size: 4rem;
     overflow: hidden;
+    text-align: center;
   }

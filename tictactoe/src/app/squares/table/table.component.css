@@ -2,10 +2,11 @@
 display: inline-block;
     height:7rem;
     width:33%;
-    align-items: center;
-    text-align: center;
+    
     text-align: center;
     padding-bottom: 2%;
+    padding-left:10%;
+    padding-right:10%;
     
 }
 .description{
@@ -14,5 +15,10 @@ display: inline-block;
 }
 .newgame{
     text-align: center;
+}
+.wrapper{
+    width:30%;
+    margin-left:35%;
+    margin-right: 35%;
 }
 
