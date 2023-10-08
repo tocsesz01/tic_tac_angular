@@ -23,7 +23,9 @@ export class TableComponent implements OnInit {
     }
     newGame(){
       this.winner = '';
+      this.next = 'X';
       this.boardService.newGame();
+      
     }
     
   }
