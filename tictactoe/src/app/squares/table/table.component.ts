@@ -9,9 +9,19 @@ import { TictacserviceService } from 'src/app/tictacservice.service';
 export class TableComponent implements OnInit {
   
     constructor(public boardService: TictacserviceService){}
-  
-    ngOnInit(): void {}
-  
+    next: String = '';
+    winner: String = '';
+    ngOnInit(): void {
+      this.next = this.boardService.nextPlayer;
+    }
+
+    changeNext(){
+      this.next = this.boardService.nextPlayer;
+      if (this.boardService.isGameOver == true){
+        this.winner = this.boardService.winner;
+      }
+    }
+
     
   }
 

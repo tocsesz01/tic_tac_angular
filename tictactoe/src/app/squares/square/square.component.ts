@@ -8,6 +8,7 @@ import { TictacserviceService } from 'src/app/tictacservice.service';
 })
 export class SquareComponent implements OnInit {
   @Input() tick: any = null;
+  @Input() id: number;
 
   constructor(public ticserv: TictacserviceService){}
 
