@@ -77,6 +77,11 @@ export class TictacserviceService {
         this.winner = tick1;
         console.log(this.winner);
         this.isGameOver = true;
+      }
+      if (this.turnCount == 9 && this.winner === ''){
+        
+        this.winner = 'draw';
+        this.isGameOver = true;
       }  
   }
 }

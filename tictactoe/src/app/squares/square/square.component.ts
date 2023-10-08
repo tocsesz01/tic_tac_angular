@@ -19,12 +19,14 @@ export class SquareComponent implements OnInit {
       this.ticserv.nextPlayer = 'O';
       this.tick = 'X';
       this.ticserv.updateBoard(this)
+      this.ticserv.turnCount++;
       this.ticserv.checkWinner();
       console.log(this.ticserv.winner);
     } else if (this.ticserv.nextPlayer == 'O' && this.tick == null && this.ticserv.isGameOver == false){
       this.ticserv.nextPlayer = 'X';
       this.tick = 'O';
       this.ticserv.updateBoard(this)
+      this.ticserv.turnCount++;
       this.ticserv.checkWinner();
     }
   }
