@@ -1,14 +1,15 @@
 .container {
 display: inline-block;
-   height:100px;
-   width:33%;
-   background-color: rgb(163, 163, 173);
+    height:7rem;
+    width:33%;
     align-items: center;
     text-align: center;
     text-align: center;
+    padding-bottom: 2%;
 }
 .description{
     text-align: center;
+    font-size: xx-large;
 }
 .newgame{
     text-align: center;
