@@ -36,9 +36,11 @@ export class SquareComponent implements OnInit {
       console.log(this.id);
       this.ticserv.turnCount++;
       this.ticserv.checkWinner();
+      if (this.ticserv.isGameOver == false){
       const moveID = this.ticserv.goodMove();
       this.ticserv.turnCount++;
       this.ticserv.checkWinner();
+      }
     }
 }
 }
