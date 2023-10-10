@@ -7,7 +7,7 @@ import { TictacserviceService } from 'src/app/tictacservice.service';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  
+    
     constructor(public boardService: TictacserviceService){}
     next: String = '';
     winner: String = '';
@@ -25,7 +25,12 @@ export class TableComponent implements OnInit {
       this.winner = '';
       this.next = 'X';
       this.boardService.newGame();
-      
+    }
+    goBack(){
+      this.newGame();
+      this.boardService.versusComputer = false;
+      this.boardService.versusPlayer = false;
+      this.boardService.menu = true;
     }
     
   }

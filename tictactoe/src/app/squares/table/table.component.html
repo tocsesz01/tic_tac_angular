@@ -1,11 +1,14 @@
-<div class="wrapper ">
+
+<app-menu *ngIf="this.boardService.menu"></app-menu>
+<div class="wrapper" *ngIf="!this.boardService.menu">
 <div class="containersq" *ngFor="let square of boardService.board;">
-<app-square [id]="square.id" (click)="changeNext()"></app-square>
+<app-square [id]="square.id" [tick]="square.tick" (click)="changeNext()"></app-square>
 </div>
 <br><br>
 <div class="description" *ngIf="this.winner==''">{{ next }} is next</div>
 <div class="description" *ngIf="this.winner!==''">The winner is: {{ winner }}</div>
 <div class="newgame">
-    <button class="btn btn-secondary" (click)="newGame()" *ngIf="this.winner!==''">New Game</button>
+    <button class="btn btn-secondary" (click)="newGame()" *ngIf="this.winner!==''">New Game</button><br><br>
+    <button class="btn btn-secondary" (click)="goBack()" *ngIf="this.winner!==''">Go back</button>
 </div>
 </div>

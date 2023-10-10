@@ -1,0 +1,15 @@
+button{
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.menu{
+    text-align: center;
+    vertical-align: center;
+    margin-top:5%;
+}
+.credits{
+    margin-top:3%;
+}

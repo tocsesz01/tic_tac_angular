@@ -15,6 +15,7 @@ export class SquareComponent implements OnInit {
   ngOnInit(): void {}
 
   clickedSquare(){
+    if (this.ticserv.versusPlayer){
     if (this.ticserv.nextPlayer == 'X' && this.tick == null && this.ticserv.isGameOver == false){
       this.ticserv.nextPlayer = 'O';
       this.tick = 'X';
@@ -28,6 +29,16 @@ export class SquareComponent implements OnInit {
       this.ticserv.updateBoard(this)
       this.ticserv.turnCount++;
       this.ticserv.checkWinner();
+    }}
+    if (this.ticserv.versusComputer && this.tick == null && this.ticserv.isGameOver == false){
+      this.tick = 'X';
+      this.ticserv.updateBoard(this)
+      console.log(this.id);
+      this.ticserv.turnCount++;
+      this.ticserv.checkWinner();
+      const moveID = this.ticserv.goodMove();
+      this.ticserv.turnCount++;
+      this.ticserv.checkWinner();
     }
-  }
+}
 }
