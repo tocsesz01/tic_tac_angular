@@ -33,7 +33,6 @@ export class SquareComponent implements OnInit {
     if (this.ticserv.versusComputer && this.tick == null && this.ticserv.isGameOver == false){
       this.tick = 'X';
       this.ticserv.updateBoard(this)
-      console.log(this.id);
       this.ticserv.turnCount++;
       this.ticserv.checkWinner();
       if (this.ticserv.isGameOver == false){
